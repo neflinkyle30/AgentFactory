@@ -49,16 +49,16 @@ Chain strategy: stacked-to-main
 
 ## Phase-1: Complete Pipeline — 8 roles, 8 gates
 
-- [ ] **T-025** `backend/roles/spec.py`: SHALL reqs + Given-When-Then scenarios, 100% AC coverage. G2 validates all ACs mapped + schema valid. **L·BE·T-010·SPEC-REQ-1→7**
-- [ ] **T-026** `backend/roles/design.py`: read-only repo exploration (Glob/Grep/Read), design.md + files_referenced[]. G3 validates os.path.exists(). **L·BE·T-010·DESIGN-REQ-1→9**
-- [ ] **T-027** `backend/roles/tasks.py`: atomic breakdown, requirement-to-task coverage, circular dep detection. G4 validates coverage + no cycles. **L·BE·T-010·TASKS-REQ-1→7**
-- [ ] **T-028** `backend/roles/verify.py`: fresh session, test-per-AC, Playwright screenshot, API capture, evidence to `runs/<id>/evidence/`. **L·BE·T-010·VERF-REQ-1→8**
-- [ ] **T-029** `backend/roles/review.py`: 5-dimension review (Security>Integrity>Performance>Architecture>Quality), CRITICAL/WARNING/SUGGESTION/OK. Read-only. **L·BE·T-010·REVW-REQ-1→9**
-- [ ] **T-030** `backend/roles/pr_agent.py`: secret scan pre-push, GitProvider dispatch, auto-generated PR body. **L·BE·T-010·PR-REQ-1→8**
-- [ ] **T-031** `backend/git/provider.py`: GitProvider ABC (clone,branch,commit,push,create_pr) + detect_provider(). GitHub stub. **M·BE·T-030**
-- [ ] **T-032** Expand to 8-phase PipelineStepper. Add EvidencePanel (Tests|API|Screenshots|Review tabs), BudgetTracker, PRSummaryCard. Orchestrator loop G6↔G7. **L·FE·T-020,T-028,T-029·DASH-REQ-1→5,9**
-- [ ] **T-033** HITL pause: `POST /api/runs/{id}/approve` + HITLApprove component. Pause at PR_READY until approved. **M·BE+FE·T-030·ORCH-REQ-7**
-- [ ] **T-034** Dark mode: `dark.css` with OKLCH dark variants, theme toggle, localStorage persistence, transitions. Add to G5/G6/G7 gate evaluator chains (retry×2 + loop×2). **M·FE·T-024·DASH-REQ-8**
+- [x] **T-025** `backend/roles/spec.py`: SHALL reqs + Given-When-Then scenarios, 100% AC coverage. G2 validates all ACs mapped + schema valid. **L·BE·T-010·SPEC-REQ-1→7**
+- [x] **T-026** `backend/roles/design.py`: read-only repo exploration (Glob/Grep/Read), design.md + files_referenced[]. G3 validates os.path.exists(). **L·BE·T-010·DESIGN-REQ-1→9**
+- [x] **T-027** `backend/roles/tasks.py`: atomic breakdown, requirement-to-task coverage, circular dep detection. G4 validates coverage + no cycles. **L·BE·T-010·TASKS-REQ-1→7**
+- [x] **T-028** `backend/roles/verify.py`: fresh session, test-per-AC, Playwright screenshot, API capture, evidence to `runs/<id>/evidence/`. **L·BE·T-010·VERF-REQ-1→8**
+- [x] **T-029** `backend/roles/review.py`: 5-dimension review (Security>Integrity>Performance>Architecture>Quality), CRITICAL/WARNING/SUGGESTION/OK. Read-only. **L·BE·T-010·REVW-REQ-1→9**
+- [x] **T-030** `backend/roles/pr_agent.py`: secret scan pre-push, GitProvider dispatch, auto-generated PR body. **L·BE·T-010·PR-REQ-1→8**
+- [x] **T-031** `backend/git/provider.py`: GitProvider ABC (clone,branch,commit,push,create_pr) + detect_provider(). GitHub stub. **M·BE·T-030**
+- [x] **T-032** Expand to 8-phase PipelineStepper. Add EvidencePanel (Tests|API|Screenshots|Review tabs), BudgetTracker, PRSummaryCard. Orchestrator loop G6↔G7. **L·FE·T-020,T-028,T-029·DASH-REQ-1→5,9**
+- [x] **T-033** HITL pause: `POST /api/runs/{id}/approve` + HITLApprove component. Pause at PR_READY until approved. **M·BE+FE·T-030·ORCH-REQ-7**
+- [x] **T-034** Dark mode: `dark.css` with OKLCH dark variants, theme toggle, localStorage persistence, transitions. Add to G5/G6/G7 gate evaluator chains (retry×2 + loop×2). **M·FE·T-024·DASH-REQ-8**
 
 ## Phase-2: Polish + Providers
 

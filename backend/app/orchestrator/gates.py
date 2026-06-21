@@ -174,8 +174,16 @@ class GateEvaluator:
                 missing.append(path)
 
         if missing:
-            # Files that don't exist yet are acceptable (they are planned new files)
-            logger.info("G3: %d files not yet on disk (planned new files): %s", len(missing), missing)
+            # Only allow truly new files (paths that don't exist anywhere in the repo).
+            # Existing files that are missing from disk = hallucination → FAIL.
+            existing_missing = [p for p in missing if not p.startswith("runs/") and not p.startswith("/tmp/")]
+            if existing_missing:
+                return (
+                    False,
+                    f"G3 FAIL: {len(existing_missing)} referenced file(s) do not exist on disk — "
+                    f"possible hallucination: {existing_missing[:3]}",
+                )
+            logger.info("G3: %d planned new files (acceptable): %s", len(missing), missing)
 
         return (True, f"G3 PASS: {len(files_referenced)} files referenced ({len(missing)} new files planned)")
 
@@ -365,7 +373,12 @@ class GateEvaluator:
         if passed_tests < total_tests:
             return (False, f"G6 FAIL: passed_tests={passed_tests} < total_tests={total_tests}")
 
-        return (True, f"G6 PASS: {passed_tests}/{total_tests} tests passed")
+        # Check at least one screenshot was captured (VERF-REQ-6)
+        screenshot_paths = data.get("screenshot_paths", [])
+        if not screenshot_paths:
+            return (False, "G6 FAIL: No screenshots captured — at least 1 screenshot required")
+
+        return (True, f"G6 PASS: {passed_tests}/{total_tests} tests passed, {len(screenshot_paths)} screenshot(s)")
 
     # ── G7: Review → PR_READY ──────────────────────────────────────
 
@@ -474,6 +487,21 @@ class GateEvaluator:
         # Check conventional commit format: type(scope): description
         if ":" not in pr_title:
             return (False, f"G8 FAIL: PR title does not follow conventional commit format: \"{pr_title}\"")
+
+        # Secret scan check (PR-REQ-1): scan the workdir for secrets before allowing PR
+        try:
+            from app.guards.secret_scan import scan_for_secrets
+
+            workdir = getattr(run, "workdir_path", None)
+            if workdir and os.path.exists(workdir):
+                scan_result = await scan_for_secrets(workdir)
+                if not scan_result.passed:
+                    finding_preview = [f.finding_type for f in scan_result.findings[:3]]
+                    return (False, f"G8 FAIL: Secret scan found {len(scan_result.findings)} issue(s): {finding_preview}")
+        except ImportError:
+            logger.warning("G8: secret_scan module not available — skipping scan")
+        except Exception as exc:
+            logger.warning("G8: secret scan failed with error — allowing PR (fail-open): %s", exc)
 
         return (True, f"G8 PASS: PR title=\"{pr_title}\", branch={branch_name}")
 
