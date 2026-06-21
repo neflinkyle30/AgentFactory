@@ -1,5 +1,28 @@
+import { useState, useEffect } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
+
+const THEME_KEY = 'agent_factory_theme';
+
+function useTheme() {
+  const [isDark, setIsDark] = useState(() => {
+    const stored = localStorage.getItem(THEME_KEY);
+    if (stored) return stored === 'dark';
+    return window.matchMedia?.('(prefers-color-scheme: dark)').matches ?? false;
+  });
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (isDark) {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
+    localStorage.setItem(THEME_KEY, isDark ? 'dark' : 'light');
+  }, [isDark]);
+
+  return { isDark, toggle: () => setIsDark((prev) => !prev) };
+}
 
 /**
  * Main application shell: sidebar + content area.
@@ -8,6 +31,7 @@ import { useAuth } from '../hooks/useAuth';
 export function Layout() {
   const { user, logout } = useAuth();
   const location = useLocation();
+  const { isDark, toggle: toggleTheme } = useTheme();
 
   const navItems = [
     { label: 'Dashboard', path: '/' },
@@ -62,12 +86,22 @@ export function Layout() {
           className="px-6 py-4 border-t"
           style={{ borderColor: 'var(--blueprint-grid)' }}
         >
-          <p
-            className="text-xs mb-1 font-semibold tracking-wider uppercase"
-            style={{ color: 'var(--text-tertiary)' }}
-          >
-            {user?.email}
-          </p>
+          <div className="flex items-center justify-between mb-2">
+            <p
+              className="text-xs font-semibold tracking-wider uppercase"
+              style={{ color: 'var(--text-tertiary)' }}
+            >
+              {user?.email}
+            </p>
+            <button
+              onClick={toggleTheme}
+              className="theme-toggle"
+              title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+              aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {isDark ? '☀' : '☾'}
+            </button>
+          </div>
           <button
             onClick={logout}
             className="text-xs opacity-60 hover:opacity-100 transition-opacity"

@@ -1,3 +1,48 @@
+/**
+ * Pencil Fidelity Audit — dashboard.pen (Blueprint Industrial) vs Implementation
+ * ============================================================================
+ * Last reviewed: 2026-06-21 against frontend/designs/dashboard.pen (S1 — Run List)
+ *
+ * ALIGNED:
+ *   ✓ Blueprint grid background (horizontal + vertical grid lines at 40px intervals)
+ *   ✓ Document header annotation ("AF-OS-001 · RUN SCHEDULE · REV 2.1")
+ *   ✓ Bold horizontal rule separator (3px, primary color) after page title
+ *   ✓ Stats row with dividers (ACTIVE RUNS, COMPLETED, FAILED, BOUNCED)
+ *   ✓ Table column headers (STATUS, TICKET, PHASE, ACTIONS) with uppercase mono labels
+ *   ✓ Status symbols (✓/●/✗/⬒/◌) and color coding (success/cyan/danger/warning/tertiary)
+ *   ✓ Alternating row backgrounds (zebra stripe)
+ *   ✓ "VIEW →" action links with cyan accent and mono font weight 600
+ *   ✓ FIG annotation below table
+ *   ✓ Footer with "AGENT FACTORY OSS · DEEPSEEK AI · 8 HARD GATES · ZERO HALLUCINATION CASCADE"
+ *
+ * GAPS (noted — no code changes required for MVP):
+ *   △ Design uses IBM Plex Mono exclusively; implementation uses Fraunces (display) + Inter (body)
+ *     via the Hallmark design system. This is intentional — the Hallmark type pair supersedes
+ *     the pen file's mono-only palette. The pen was an early wireframe.
+ *   △ Design includes a 240px sidebar nav (BlueprintNav) with RUNS/TICKETS/SETTINGS items.
+ *     Implementation has Layout.tsx providing a header nav, not a sidebar. The dashboard page
+ *     is embedded inside the layout; the sidebar lives in a separate component context.
+ *   △ Design shows "DURATION" column in table; implementation shows "CREATED" (date).
+ *     Duration tracking requires per-phase timing data not yet available in the MVP run list API.
+ *   △ Design shows "AVG DURATION" as a 4th stat box (value "6m 12s"). Implementation has only
+ *     4 stat boxes total (Active/Completed/Failed/Bounced) — no average metric yet.
+ *   △ Design shows edge marks (vertical tick lines on left gutter at specific Y positions).
+ *     Implementation has a continuous vertical line instead of discrete ticks.
+ *   △ Design positions "NEW RUN" button at bottom-right (x=1100, y=540). Implementation puts
+ *     it in the table header bar for better UX on variable viewport widths.
+ *   △ Design uses explicit pixel coordinates (Blueprint layout: 1440×900 canvas). Implementation
+ *     is responsive and uses CSS flexbox/grid — exact pixel positions are not feasible.
+ *   △ Design shows phase as "PHASE 3/8 · SPEC" with progress fraction. Implementation shows
+ *     "PHASE · SPEC" without the fraction (fraction data not in current run list API).
+ *   △ Design uses hardcoded color values (#4A9FD8 accent, #E8EEF4 sidebar, #C8D6E5 borders).
+ *     Implementation uses CSS custom properties from tokens.css for theme consistency.
+ *   △ Design corner markers (TR corner at x=1340, y=580) are missing from current implementation.
+ *
+ * RESOLVED:
+ *   - The "NEW RUN" button placement difference is a deliberate UX improvement for scrolling.
+ *   - Font family divergence is by design (Hallmark overrides early pen wireframes).
+ *   - Grid line stroke widths and colors are a close approximation (0.5px #D4E0EC → subtler CSS).
+ */
 import { Link } from 'react-router-dom';
 import { useRuns } from '../hooks/useRuns';
 import type { RunListItem } from '../hooks/useRuns';

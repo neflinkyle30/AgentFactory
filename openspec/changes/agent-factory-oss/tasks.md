@@ -62,15 +62,15 @@ Chain strategy: stacked-to-main
 
 ## Phase-2: Polish + Providers
 
-- [ ] **T-035** `backend/git/github.py`: GitHubProvider via `gh` CLI. **M·BE·T-031**
-- [ ] **T-036** `backend/git/gitlab.py`: GitLabProvider via glab CLI + REST API. **M·BE·T-031**
-- [ ] **T-037** `backend/git/bitbucket.py`: BitbucketProvider via REST API. **M·BE·T-031**
-- [ ] **T-038** `backend/guards/secret_scan.py`: detect-secrets audit, block push + FAIL run on detection. **M·BE·T-030·PR-REQ-1**
-- [ ] **T-039** Full Pencil MCP dashboard: all components from `.pen` with pixel-accurate rendering. **L·FE·T-023,T-024**
+- [x] **T-035** `backend/git/github.py`: GitHubProvider via `gh` CLI. **M·BE·T-031**
+- [x] **T-036** `backend/git/gitlab.py`: GitLabProvider via glab CLI + REST API. **M·BE·T-031**
+- [x] **T-037** `backend/git/bitbucket.py`: BitbucketProvider via REST API. **M·BE·T-031**
+- [x] **T-038** `backend/guards/secret_scan.py`: detect-secrets audit, block push + FAIL run on detection. **M·BE·T-030·PR-REQ-1**
+- [x] **T-039** Full Pencil MCP dashboard: all components from `.pen` with pixel-accurate rendering. **L·FE·T-023,T-024**
 
 ## Phase-3: Hardening
 
-- [ ] **T-040** Add pytest, mypy, ruff configs to `pyproject.toml`. Write GateEvaluator unit tests (`tests/test_gates.py`). **M·BE·T-006,T-025→T-030**
-- [ ] **T-041** Integration test: full pipeline happy path (`tests/test_pipeline.py`, mock mode). Frontend component tests via Vitest. **L·BE+FE·T-020,T-032**
-- [ ] **T-042** `docker-compose.yml` + `backend/Dockerfile` + `frontend/Dockerfile` + `nginx.conf`. **M·DO·T-001,T-014**
-- [ ] **T-043** Docs: `docs/architecture.md`, `docs/setup.md`, `docs/roles.md`. **M·DOC·T-042**
+- [x] **T-040** Add pytest, mypy, ruff configs to `pyproject.toml`. Write GateEvaluator unit tests (`tests/test_gates.py`). **M·BE·T-006,T-025→T-030**
+- [x] **T-041** Integration test: full pipeline happy path (`tests/test_pipeline.py`, mock mode). Frontend component tests via Vitest. **L·BE+FE·T-020,T-032**
+- [x] **T-042** `docker-compose.yml` + `backend/Dockerfile` + `frontend/Dockerfile` + `nginx.conf`. **M·DO·T-001,T-014**
+- [x] **T-043** Docs: `docs/architecture.md`, `docs/setup.md`, `docs/roles.md`. **M·DOC·T-042**

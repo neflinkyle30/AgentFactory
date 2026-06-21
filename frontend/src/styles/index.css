@@ -2,6 +2,7 @@
    Blueprint Industrial · IBM Plex Mono · Sharp corners */
 
 @import './tokens.css';
+@import './dark.css';
 
 @tailwind base;
 @tailwind components;

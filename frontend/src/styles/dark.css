@@ -1,0 +1,104 @@
+/* Agent Factory — Dark Mode Theme
+   Blueprint Industrial dark. Uses tokens already defined in tokens.css
+   under [data-theme="dark"] and .dark selectors.
+
+   This file provides smooth transitions and dark-specific overrides.
+   Import in index.css AFTER tokens.css. */
+
+/* ── Transition layer ─────────────────────────────────────────────── */
+
+html {
+  transition: background-color var(--duration-color) var(--ease-out-expo),
+              color var(--duration-color) var(--ease-out-expo);
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+/* Ensure smooth transitions on all elements that use theme tokens */
+html.dark *,
+html.dark *::before,
+html.dark *::after {
+  transition: background-color var(--duration-color) var(--ease-out-expo),
+              border-color var(--duration-color) var(--ease-out-expo),
+              color var(--duration-color) var(--ease-out-expo);
+}
+
+/* ── Dark-specific scrollbar ──────────────────────────────────────── */
+
+html.dark ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: var(--blueprint-bg);
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: var(--blueprint-grid-strong);
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--border-strong);
+}
+
+/* ── Dark selection ───────────────────────────────────────────────── */
+
+html.dark ::selection {
+  background-color: var(--color-cyan-accent);
+  color: var(--text-inverse);
+}
+
+/* ── Dark code blocks ─────────────────────────────────────────────── */
+
+html.dark pre,
+html.dark code {
+  background-color: var(--bg-code);
+  color: var(--text-code);
+}
+
+/* ── Dark form inputs ─────────────────────────────────────────────── */
+
+html.dark .input-field {
+  background-color: var(--bg-elevated);
+  color: var(--text-primary);
+  border-color: var(--border-default);
+}
+
+html.dark .input-field::placeholder {
+  color: var(--text-tertiary);
+}
+
+/* ── Dark button hover states ─────────────────────────────────────── */
+
+html.dark .btn-primary:hover {
+  filter: brightness(1.2);
+}
+
+html.dark .btn-ghost:hover {
+  color: var(--text-primary);
+}
+
+/* ── Theme toggle icon ────────────────────────────────────────────── */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--border-default);
+  background: transparent;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  transition: all var(--duration-fast) var(--ease-out-expo);
+}
+
+.theme-toggle:hover {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}

@@ -2,6 +2,9 @@ import { useParams, Link } from 'react-router-dom';
 import { useRun } from '../hooks/useRuns';
 import { useRunStream } from '../hooks/useRunStream';
 import { PipelineStepper } from '../components/PipelineStepper';
+import { EvidencePanel } from '../components/EvidencePanel';
+import { BudgetTracker } from '../components/BudgetTracker';
+import { PRSummaryCard } from '../components/PRSummaryCard';
 
 function timeAgo(iso: string | null): string {
   if (!iso) return '—';
@@ -206,8 +209,14 @@ export default function RunDetailPage() {
           </div>
         </div>
 
-        {/* Right: Gate Status + Evidence */}
+        {/* Right: Budget + Gate Status + Evidence + PR */}
         <div className="flex-shrink-0" style={{ width: '320px' }}>
+          {/* Budget Tracker */}
+          <BudgetTracker
+            totalCostUsd={run.total_cost_usd}
+            budgetLimitUsd={run.budget_limit_usd}
+          />
+
           {/* Gate Status */}
           <div
             className="mb-6 p-6"
@@ -264,7 +273,15 @@ export default function RunDetailPage() {
             </div>
           </div>
 
-          {/* Evidence panel placeholder */}
+          {/* PR Summary Card */}
+          <PRSummaryCard
+            runId={run.id}
+            phases={run.phases}
+            hitlEnabled={run.hitl_enabled}
+            currentStatus={run.status}
+          />
+
+          {/* Evidence Panel */}
           <div
             className="p-6"
             style={{
@@ -278,12 +295,7 @@ export default function RunDetailPage() {
             >
               EVIDENCE
             </h2>
-            <p
-              className="text-xs"
-              style={{ color: 'var(--text-tertiary)' }}
-            >
-              Evidence panel (Tests · API · Screenshots · Review) will be available in a future update.
-            </p>
+            <EvidencePanel phases={run.phases} />
           </div>
         </div>
       </div>
