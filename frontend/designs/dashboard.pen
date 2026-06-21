@@ -1,0 +1,1875 @@
+{
+  "version": "1.0",
+  "type": "document",
+  "children": [
+    {
+      "id": "f1-dashboard-shell",
+      "type": "frame",
+      "name": "Dashboard Shell — 1440×900",
+      "geometry": { "x": 0, "y": 0, "width": 1440, "height": 900 },
+      "fill": "#F8F9FA",
+      "children": [
+        {
+          "id": "f1-sidebar",
+          "type": "rectangle",
+          "name": "Sidebar",
+          "geometry": { "x": 0, "y": 0, "width": 256, "height": 900 },
+          "fill": "#1E3A5F",
+          "cornerRadius": 0
+        },
+        {
+          "id": "f1-sidebar-logo",
+          "type": "text",
+          "name": "Logo / App Name",
+          "geometry": { "x": 24, "y": 32, "width": 208, "height": 32 },
+          "content": "Agent Factory",
+          "fontFamily": "Fraunces",
+          "fontSize": 20,
+          "fontWeight": 700,
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "f1-nav-dashboard",
+          "type": "group",
+          "name": "Nav — Dashboard (active)",
+          "geometry": { "x": 0, "y": 96, "width": 256, "height": 44 },
+          "children": [
+            {
+              "id": "f1-nav-dashboard-indicator",
+              "type": "rectangle",
+              "name": "Active indicator",
+              "geometry": { "x": 0, "y": 96, "width": 3, "height": 44 },
+              "fill": "#C2790A",
+              "cornerRadius": 0
+            },
+            {
+              "id": "f1-nav-dashboard-text",
+              "type": "text",
+              "name": "Dashboard link",
+              "geometry": { "x": 24, "y": 106, "width": 208, "height": 24 },
+              "content": "Dashboard",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": 500,
+              "fill": "#FFFFFF"
+            }
+          ]
+        },
+        {
+          "id": "f1-nav-runs",
+          "type": "text",
+          "name": "Runs link",
+          "geometry": { "x": 24, "y": 156, "width": 208, "height": 24 },
+          "content": "Runs",
+          "fontFamily": "Inter",
+          "fontSize": 15,
+          "fontWeight": 400,
+          "fill": "#94A3B8"
+        },
+        {
+          "id": "f1-nav-tickets",
+          "type": "text",
+          "name": "Tickets link",
+          "geometry": { "x": 24, "y": 204, "width": 208, "height": 24 },
+          "content": "Tickets",
+          "fontFamily": "Inter",
+          "fontSize": 15,
+          "fontWeight": 400,
+          "fill": "#94A3B8"
+        },
+        {
+          "id": "f1-nav-settings",
+          "type": "text",
+          "name": "Settings link",
+          "geometry": { "x": 24, "y": 252, "width": 208, "height": 24 },
+          "content": "Settings",
+          "fontFamily": "Inter",
+          "fontSize": 15,
+          "fontWeight": 400,
+          "fill": "#94A3B8"
+        },
+        {
+          "id": "f1-page-title",
+          "type": "text",
+          "name": "Page title",
+          "geometry": { "x": 288, "y": 32, "width": 300, "height": 40 },
+          "content": "Runs",
+          "fontFamily": "Fraunces",
+          "fontSize": 36,
+          "fontWeight": 700,
+          "fill": "#1E293B"
+        },
+        {
+          "id": "f1-new-ticket-btn",
+          "type": "rectangle",
+          "name": "New Ticket button",
+          "geometry": { "x": 1328, "y": 32, "width": 120, "height": 40 },
+          "fill": "#1E3A5F",
+          "cornerRadius": 6
+        },
+        {
+          "id": "f1-new-ticket-btn-text",
+          "type": "text",
+          "name": "Button label",
+          "geometry": { "x": 1342, "y": 41, "width": 92, "height": 22 },
+          "content": "New Ticket",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": 500,
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "f1-content-placeholder",
+          "type": "rectangle",
+          "name": "Content area placeholder",
+          "geometry": { "x": 288, "y": 96, "width": 1120, "height": 770 },
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "stroke": "#E2E8F0",
+          "strokeWidth": 1
+        },
+        {
+          "id": "f1-content-placeholder-text",
+          "type": "text",
+          "name": "Placeholder message",
+          "geometry": { "x": 288, "y": 440, "width": 1120, "height": 24 },
+          "content": "Run list or dashboard content — see Run List frame",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": 400,
+          "fill": "#94A3B8",
+          "textAlignHorizontal": "center"
+        }
+      ]
+    },
+    {
+      "id": "f2-ticket-form",
+      "type": "frame",
+      "name": "Ticket Form — 1440×900",
+      "geometry": { "x": 1480, "y": 0, "width": 1440, "height": 900 },
+      "fill": "#F8F9FA",
+      "children": [
+        {
+          "id": "f2-sidebar",
+          "type": "rectangle",
+          "name": "Sidebar",
+          "geometry": { "x": 0, "y": 0, "width": 256, "height": 900 },
+          "fill": "#1E3A5F"
+        },
+        {
+          "id": "f2-back-link",
+          "type": "text",
+          "name": "Back link",
+          "geometry": { "x": 288, "y": 32, "width": 100, "height": 24 },
+          "content": "← Back to Runs",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": 500,
+          "fill": "#1E3A5F"
+        },
+        {
+          "id": "f2-page-title",
+          "type": "text",
+          "name": "Page title",
+          "geometry": { "x": 288, "y": 72, "width": 500, "height": 40 },
+          "content": "New Ticket",
+          "fontFamily": "Fraunces",
+          "fontSize": 36,
+          "fontWeight": 700,
+          "fill": "#1E293B"
+        },
+        {
+          "id": "f2-form-card",
+          "type": "rectangle",
+          "name": "Form card background",
+          "geometry": { "x": 288, "y": 136, "width": 660, "height": 680 },
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "stroke": "#E2E8F0",
+          "strokeWidth": 1
+        },
+        {
+          "id": "f2-label-title",
+          "type": "text",
+          "name": "Title label",
+          "geometry": { "x": 312, "y": 160, "width": 100, "height": 20 },
+          "content": "TITLE",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": 500,
+          "letterSpacing": 0.05,
+          "fill": "#64748B"
+        },
+        {
+          "id": "f2-input-title",
+          "type": "rectangle",
+          "name": "Title input",
+          "geometry": { "x": 312, "y": 184, "width": 612, "height": 40 },
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "stroke": "#E2E8F0",
+          "strokeWidth": 1
+        },
+        {
+          "id": "f2-input-title-text",
+          "type": "text",
+          "name": "Title placeholder",
+          "geometry": { "x": 324, "y": 194, "width": 500, "height": 20 },
+          "content": "Add dark mode toggle to dashboard settings",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": 400,
+          "fill": "#94A3B8"
+        },
+        {
+          "id": "f2-label-desc",
+          "type": "text",
+          "name": "Description label",
+          "geometry": { "x": 312, "y": 248, "width": 120, "height": 20 },
+          "content": "DESCRIPTION",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": 500,
+          "letterSpacing": 0.05,
+          "fill": "#64748B"
+        },
+        {
+          "id": "f2-input-desc",
+          "type": "rectangle",
+          "name": "Description textarea",
+          "geometry": { "x": 312, "y": 272, "width": 612, "height": 100 },
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "stroke": "#E2E8F0",
+          "strokeWidth": 1
+        },
+        {
+          "id": "f2-input-desc-text",
+          "type": "text",
+          "name": "Description placeholder",
+          "geometry": { "x": 324, "y": 280, "width": 588, "height": 80 },
+          "content": "Allow users to switch between light and dark color themes. Preferences should persist across sessions via localStorage. Provide smooth transitions between modes.",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": 400,
+          "fill": "#94A3B8"
+        },
+        {
+          "id": "f2-label-ac",
+          "type": "text",
+          "name": "Acceptance Criteria label",
+          "geometry": { "x": 312, "y": 396, "width": 200, "height": 20 },
+          "content": "ACCEPTANCE CRITERIA",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": 500,
+          "letterSpacing": 0.05,
+          "fill": "#64748B"
+        },
+        {
+          "id": "f2-ac-row-1",
+          "type": "group",
+          "name": "AC row 1",
+          "geometry": { "x": 312, "y": 420, "width": 612, "height": 72 },
+          "children": [
+            {
+              "id": "f2-ac1-given",
+              "type": "rectangle",
+              "name": "Given input",
+              "geometry": { "x": 312, "y": 420, "width": 196, "height": 32 },
+              "fill": "#F8F9FA",
+              "cornerRadius": 6,
+              "stroke": "#E2E8F0",
+              "strokeWidth": 1
+            },
+            {
+              "id": "f2-ac1-given-text",
+              "type": "text",
+              "name": "Given placeholder",
+              "geometry": { "x": 320, "y": 426, "width": 180, "height": 20 },
+              "content": "GIVEN the user is on the dashboard",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fill": "#94A3B8"
+            },
+            {
+              "id": "f2-ac1-when",
+              "type": "rectangle",
+              "name": "When input",
+              "geometry": { "x": 516, "y": 420, "width": 196, "height": 32 },
+              "fill": "#F8F9FA",
+              "cornerRadius": 6,
+              "stroke": "#E2E8F0",
+              "strokeWidth": 1
+            },
+            {
+              "id": "f2-ac1-when-text",
+              "type": "text",
+              "name": "When placeholder",
+              "geometry": { "x": 524, "y": 426, "width": 180, "height": 20 },
+              "content": "WHEN they click the theme toggle",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fill": "#94A3B8"
+            },
+            {
+              "id": "f2-ac1-then",
+              "type": "rectangle",
+              "name": "Then input",
+              "geometry": { "x": 720, "y": 420, "width": 196, "height": 32 },
+              "fill": "#F8F9FA",
+              "cornerRadius": 6,
+              "stroke": "#E2E8F0",
+              "strokeWidth": 1
+            },
+            {
+              "id": "f2-ac1-then-text",
+              "type": "text",
+              "name": "Then placeholder",
+              "geometry": { "x": 728, "y": 426, "width": 180, "height": 20 },
+              "content": "THEN the theme switches smoothly",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fill": "#94A3B8"
+            }
+          ]
+        },
+        {
+          "id": "f2-ac-row-2",
+          "type": "group",
+          "name": "AC row 2",
+          "geometry": { "x": 312, "y": 500, "width": 612, "height": 32 },
+          "children": [
+            {
+              "id": "f2-ac2-given",
+              "type": "rectangle",
+              "name": "Given input",
+              "geometry": { "x": 312, "y": 500, "width": 196, "height": 32 },
+              "fill": "#F8F9FA",
+              "cornerRadius": 6,
+              "stroke": "#E2E8F0",
+              "strokeWidth": 1
+            },
+            {
+              "id": "f2-ac2-when",
+              "type": "rectangle",
+              "name": "When input",
+              "geometry": { "x": 516, "y": 500, "width": 196, "height": 32 },
+              "fill": "#F8F9FA",
+              "cornerRadius": 6,
+              "stroke": "#E2E8F0",
+              "strokeWidth": 1
+            },
+            {
+              "id": "f2-ac2-then",
+              "type": "rectangle",
+              "name": "Then input",
+              "geometry": { "x": 720, "y": 500, "width": 196, "height": 32 },
+              "fill": "#F8F9FA",
+              "cornerRadius": 6,
+              "stroke": "#E2E8F0",
+              "strokeWidth": 1
+            }
+          ]
+        },
+        {
+          "id": "f2-add-ac-link",
+          "type": "text",
+          "name": "Add AC link",
+          "geometry": { "x": 312, "y": 548, "width": 150, "height": 20 },
+          "content": "+ Add criterion",
+          "fontFamily": "Inter",
+          "fontSize": 13,
+          "fontWeight": 500,
+          "fill": "#1E5EA0"
+        },
+        {
+          "id": "f2-label-priority",
+          "type": "text",
+          "name": "Priority label",
+          "geometry": { "x": 312, "y": 592, "width": 80, "height": 20 },
+          "content": "PRIORITY",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": 500,
+          "letterSpacing": 0.05,
+          "fill": "#64748B"
+        },
+        {
+          "id": "f2-select-priority",
+          "type": "rectangle",
+          "name": "Priority dropdown",
+          "geometry": { "x": 312, "y": 616, "width": 200, "height": 40 },
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "stroke": "#E2E8F0",
+          "strokeWidth": 1
+        },
+        {
+          "id": "f2-select-priority-text",
+          "type": "text",
+          "name": "Priority value",
+          "geometry": { "x": 324, "y": 626, "width": 180, "height": 20 },
+          "content": "Medium",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": 400,
+          "fill": "#1E293B"
+        },
+        {
+          "id": "f2-label-components",
+          "type": "text",
+          "name": "Components label",
+          "geometry": { "x": 536, "y": 592, "width": 120, "height": 20 },
+          "content": "COMPONENTS",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": 500,
+          "letterSpacing": 0.05,
+          "fill": "#64748B"
+        },
+        {
+          "id": "f2-input-components",
+          "type": "rectangle",
+          "name": "Components input",
+          "geometry": { "x": 536, "y": 616, "width": 388, "height": 40 },
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "stroke": "#E2E8F0",
+          "strokeWidth": 1
+        },
+        {
+          "id": "f2-input-components-text",
+          "type": "text",
+          "name": "Components placeholder",
+          "geometry": { "x": 548, "y": 626, "width": 360, "height": 20 },
+          "content": "frontend, design-system",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": 400,
+          "fill": "#94A3B8"
+        },
+        {
+          "id": "f2-submit-btn",
+          "type": "rectangle",
+          "name": "Submit button",
+          "geometry": { "x": 312, "y": 704, "width": 160, "height": 44 },
+          "fill": "#1E3A5F",
+          "cornerRadius": 6
+        },
+        {
+          "id": "f2-submit-btn-text",
+          "type": "text",
+          "name": "Submit button label",
+          "geometry": { "x": 344, "y": 715, "width": 96, "height": 22 },
+          "content": "Submit Ticket",
+          "fontFamily": "Inter",
+          "fontSize": 15,
+          "fontWeight": 500,
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "f2-preview-panel",
+          "type": "rectangle",
+          "name": "Preview / enrichment panel",
+          "geometry": { "x": 976, "y": 136, "width": 432, "height": 400 },
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "stroke": "#E2E8F0",
+          "strokeWidth": 1
+        },
+        {
+          "id": "f2-preview-title",
+          "type": "text",
+          "name": "Preview panel title",
+          "geometry": { "x": 1000, "y": 160, "width": 200, "height": 24 },
+          "content": "Ticket Preview",
+          "fontFamily": "Fraunces",
+          "fontSize": 18,
+          "fontWeight": 600,
+          "fill": "#1E293B"
+        },
+        {
+          "id": "f2-preview-body",
+          "type": "text",
+          "name": "Preview body placeholder",
+          "geometry": { "x": 1000, "y": 204, "width": 384, "height": 100 },
+          "content": "Normalized ticket output will appear here after submission. Includes completeness score and field extraction.",
+          "fontFamily": "Inter",
+          "fontSize": 13,
+          "fontWeight": 400,
+          "fill": "#94A3B8"
+        }
+      ]
+    },
+    {
+      "id": "f3-pipeline-stepper",
+      "type": "frame",
+      "name": "Pipeline Stepper — 1200×400",
+      "geometry": { "x": 0, "y": 940, "width": 1200, "height": 400 },
+      "fill": "#FFFFFF",
+      "children": [
+        {
+          "id": "f3-title",
+          "type": "text",
+          "name": "Stepper title",
+          "geometry": { "x": 80, "y": 40, "width": 400, "height": 32 },
+          "content": "Pipeline Progress",
+          "fontFamily": "Fraunces",
+          "fontSize": 24,
+          "fontWeight": 700,
+          "fill": "#1E293B"
+        },
+        {
+          "id": "f3-connector-line",
+          "type": "line",
+          "name": "Connector background line",
+          "geometry": { "x": 100, "y": 200, "width": 1000, "height": 2 },
+          "stroke": "#E2E8F0",
+          "strokeWidth": 2
+        },
+        {
+          "id": "f3-phase-intake",
+          "type": "group",
+          "name": "Phase: Intake (completed)",
+          "geometry": { "x": 100, "y": 184, "width": 32, "height": 32 },
+          "children": [
+            {
+              "id": "f3-intake-circle",
+              "type": "ellipse",
+              "name": "Intake circle",
+              "geometry": { "x": 100, "y": 184, "width": 32, "height": 32 },
+              "fill": "#155E2B"
+            },
+            {
+              "id": "f3-intake-check",
+              "type": "text",
+              "name": "Check mark",
+              "geometry": { "x": 107, "y": 186, "width": 18, "height": 28 },
+              "content": "✓",
+              "fontSize": 18,
+              "fontWeight": 700,
+              "fill": "#FFFFFF"
+            },
+            {
+              "id": "f3-intake-label",
+              "type": "text",
+              "name": "Intake label",
+              "geometry": { "x": 86, "y": 228, "width": 60, "height": 16 },
+              "content": "Intake",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": 500,
+              "fill": "#155E2B",
+              "textAlignHorizontal": "center"
+            }
+          ]
+        },
+        {
+          "id": "f3-connector-1",
+          "type": "line",
+          "name": "Connector Intake→Spec (done)",
+          "geometry": { "x": 132, "y": 200, "width": 108, "height": 2 },
+          "stroke": "#155E2B",
+          "strokeWidth": 2
+        },
+        {
+          "id": "f3-phase-spec",
+          "type": "group",
+          "name": "Phase: Spec (active)",
+          "geometry": { "x": 240, "y": 184, "width": 32, "height": 32 },
+          "children": [
+            {
+              "id": "f3-spec-circle",
+              "type": "ellipse",
+              "name": "Spec circle",
+              "geometry": { "x": 240, "y": 184, "width": 32, "height": 32 },
+              "fill": "#1E5EA0"
+            },
+            {
+              "id": "f3-spec-icon",
+              "type": "text",
+              "name": "Spec icon",
+              "geometry": { "x": 249, "y": 186, "width": 14, "height": 28 },
+              "content": "S",
+              "fontSize": 16,
+              "fontWeight": 700,
+              "fill": "#FFFFFF"
+            },
+            {
+              "id": "f3-spec-label",
+              "type": "text",
+              "name": "Spec label",
+              "geometry": { "x": 228, "y": 228, "width": 56, "height": 16 },
+              "content": "Spec",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": 600,
+              "fill": "#1E5EA0",
+              "textAlignHorizontal": "center"
+            }
+          ]
+        },
+        {
+          "id": "f3-connector-2",
+          "type": "line",
+          "name": "Connector Spec→Design (pending)",
+          "geometry": { "x": 272, "y": 200, "width": 108, "height": 2 },
+          "stroke": "#E2E8F0",
+          "strokeWidth": 1,
+          "strokeDash": "4 4"
+        },
+        {
+          "id": "f3-phase-design",
+          "type": "group",
+          "name": "Phase: Design (pending)",
+          "geometry": { "x": 380, "y": 184, "width": 32, "height": 32 },
+          "children": [
+            {
+              "id": "f3-design-circle",
+              "type": "ellipse",
+              "name": "Design circle",
+              "geometry": { "x": 380, "y": 184, "width": 32, "height": 32 },
+              "fill": "#F1F5F9",
+              "stroke": "#E2E8F0",
+              "strokeWidth": 1
+            },
+            {
+              "id": "f3-design-icon",
+              "type": "text",
+              "name": "Design icon",
+              "geometry": { "x": 389, "y": 186, "width": 14, "height": 28 },
+              "content": "D",
+              "fontSize": 16,
+              "fontWeight": 700,
+              "fill": "#94A3B8"
+            },
+            {
+              "id": "f3-design-label",
+              "type": "text",
+              "name": "Design label",
+              "geometry": { "x": 365, "y": 228, "width": 62, "height": 16 },
+              "content": "Design",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fill": "#94A3B8",
+              "textAlignHorizontal": "center"
+            }
+          ]
+        },
+        {
+          "id": "f3-connector-3",
+          "type": "line",
+          "name": "Connector Design→Tasks (pending)",
+          "geometry": { "x": 412, "y": 200, "width": 108, "height": 2 },
+          "stroke": "#E2E8F0",
+          "strokeWidth": 1,
+          "strokeDash": "4 4"
+        },
+        {
+          "id": "f3-phase-tasks",
+          "type": "group",
+          "name": "Phase: Tasks (pending)",
+          "geometry": { "x": 520, "y": 184, "width": 32, "height": 32 },
+          "children": [
+            {
+              "id": "f3-tasks-circle",
+              "type": "ellipse",
+              "name": "Tasks circle",
+              "geometry": { "x": 520, "y": 184, "width": 32, "height": 32 },
+              "fill": "#F1F5F9",
+              "stroke": "#E2E8F0",
+              "strokeWidth": 1
+            },
+            {
+              "id": "f3-tasks-icon",
+              "type": "text",
+              "name": "Tasks icon",
+              "geometry": { "x": 529, "y": 186, "width": 14, "height": 28 },
+              "content": "T",
+              "fontSize": 16,
+              "fontWeight": 700,
+              "fill": "#94A3B8"
+            },
+            {
+              "id": "f3-tasks-label",
+              "type": "text",
+              "name": "Tasks label",
+              "geometry": { "x": 508, "y": 228, "width": 56, "height": 16 },
+              "content": "Tasks",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fill": "#94A3B8",
+              "textAlignHorizontal": "center"
+            }
+          ]
+        },
+        {
+          "id": "f3-connector-4",
+          "type": "line",
+          "name": "Connector Tasks→Develop (pending)",
+          "geometry": { "x": 552, "y": 200, "width": 108, "height": 2 },
+          "stroke": "#E2E8F0",
+          "strokeWidth": 1,
+          "strokeDash": "4 4"
+        },
+        {
+          "id": "f3-phase-develop",
+          "type": "group",
+          "name": "Phase: Develop (pending)",
+          "geometry": { "x": 660, "y": 184, "width": 32, "height": 32 },
+          "children": [
+            {
+              "id": "f3-develop-circle",
+              "type": "ellipse",
+              "name": "Develop circle",
+              "geometry": { "x": 660, "y": 184, "width": 32, "height": 32 },
+              "fill": "#F1F5F9",
+              "stroke": "#E2E8F0",
+              "strokeWidth": 1
+            },
+            {
+              "id": "f3-develop-icon",
+              "type": "text",
+              "name": "Develop icon",
+              "geometry": { "x": 666, "y": 186, "width": 20, "height": 28 },
+              "content": "Dev",
+              "fontSize": 13,
+              "fontWeight": 700,
+              "fill": "#94A3B8"
+            },
+            {
+              "id": "f3-develop-label",
+              "type": "text",
+              "name": "Develop label",
+              "geometry": { "x": 641, "y": 228, "width": 70, "height": 16 },
+              "content": "Develop",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fill": "#94A3B8",
+              "textAlignHorizontal": "center"
+            }
+          ]
+        },
+        {
+          "id": "f3-connector-5",
+          "type": "line",
+          "name": "Connector Develop→Verify (pending)",
+          "geometry": { "x": 692, "y": 200, "width": 108, "height": 2 },
+          "stroke": "#E2E8F0",
+          "strokeWidth": 1,
+          "strokeDash": "4 4"
+        },
+        {
+          "id": "f3-phase-verify",
+          "type": "group",
+          "name": "Phase: Verify (pending)",
+          "geometry": { "x": 800, "y": 184, "width": 32, "height": 32 },
+          "children": [
+            {
+              "id": "f3-verify-circle",
+              "type": "ellipse",
+              "name": "Verify circle",
+              "geometry": { "x": 800, "y": 184, "width": 32, "height": 32 },
+              "fill": "#F1F5F9",
+              "stroke": "#E2E8F0",
+              "strokeWidth": 1
+            },
+            {
+              "id": "f3-verify-icon",
+              "type": "text",
+              "name": "Verify icon",
+              "geometry": { "x": 809, "y": 186, "width": 14, "height": 28 },
+              "content": "V",
+              "fontSize": 16,
+              "fontWeight": 700,
+              "fill": "#94A3B8"
+            },
+            {
+              "id": "f3-verify-label",
+              "type": "text",
+              "name": "Verify label",
+              "geometry": { "x": 787, "y": 228, "width": 58, "height": 16 },
+              "content": "Verify",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fill": "#94A3B8",
+              "textAlignHorizontal": "center"
+            }
+          ]
+        },
+        {
+          "id": "f3-connector-6",
+          "type": "line",
+          "name": "Connector Verify→Review (pending)",
+          "geometry": { "x": 832, "y": 200, "width": 108, "height": 2 },
+          "stroke": "#E2E8F0",
+          "strokeWidth": 1,
+          "strokeDash": "4 4"
+        },
+        {
+          "id": "f3-phase-review",
+          "type": "group",
+          "name": "Phase: Review (pending)",
+          "geometry": { "x": 940, "y": 184, "width": 32, "height": 32 },
+          "children": [
+            {
+              "id": "f3-review-circle",
+              "type": "ellipse",
+              "name": "Review circle",
+              "geometry": { "x": 940, "y": 184, "width": 32, "height": 32 },
+              "fill": "#F1F5F9",
+              "stroke": "#E2E8F0",
+              "strokeWidth": 1
+            },
+            {
+              "id": "f3-review-icon",
+              "type": "text",
+              "name": "Review icon",
+              "geometry": { "x": 949, "y": 186, "width": 14, "height": 28 },
+              "content": "R",
+              "fontSize": 16,
+              "fontWeight": 700,
+              "fill": "#94A3B8"
+            },
+            {
+              "id": "f3-review-label",
+              "type": "text",
+              "name": "Review label",
+              "geometry": { "x": 926, "y": 228, "width": 60, "height": 16 },
+              "content": "Review",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fill": "#94A3B8",
+              "textAlignHorizontal": "center"
+            }
+          ]
+        },
+        {
+          "id": "f3-connector-7",
+          "type": "line",
+          "name": "Connector Review→PR (pending)",
+          "geometry": { "x": 972, "y": 200, "width": 108, "height": 2 },
+          "stroke": "#E2E8F0",
+          "strokeWidth": 1,
+          "strokeDash": "4 4"
+        },
+        {
+          "id": "f3-phase-pr",
+          "type": "group",
+          "name": "Phase: PR (pending)",
+          "geometry": { "x": 1080, "y": 184, "width": 32, "height": 32 },
+          "children": [
+            {
+              "id": "f3-pr-circle",
+              "type": "ellipse",
+              "name": "PR circle",
+              "geometry": { "x": 1080, "y": 184, "width": 32, "height": 32 },
+              "fill": "#F1F5F9",
+              "stroke": "#E2E8F0",
+              "strokeWidth": 1
+            },
+            {
+              "id": "f3-pr-icon",
+              "type": "text",
+              "name": "PR icon",
+              "geometry": { "x": 1086, "y": 186, "width": 20, "height": 28 },
+              "content": "PR",
+              "fontSize": 13,
+              "fontWeight": 700,
+              "fill": "#94A3B8"
+            },
+            {
+              "id": "f3-pr-label",
+              "type": "text",
+              "name": "PR label",
+              "geometry": { "x": 1081, "y": 228, "width": 30, "height": 16 },
+              "content": "PR",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fill": "#94A3B8",
+              "textAlignHorizontal": "center"
+            }
+          ]
+        },
+        {
+          "id": "f3-legend",
+          "type": "group",
+          "name": "Legend",
+          "geometry": { "x": 80, "y": 300, "width": 1040, "height": 60 },
+          "children": [
+            {
+              "id": "f3-legend-passed",
+              "type": "ellipse",
+              "name": "Passed dot",
+              "geometry": { "x": 80, "y": 310, "width": 12, "height": 12 },
+              "fill": "#155E2B"
+            },
+            {
+              "id": "f3-legend-passed-text",
+              "type": "text",
+              "name": "Passed label",
+              "geometry": { "x": 100, "y": 308, "width": 60, "height": 16 },
+              "content": "Completed",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fill": "#64748B"
+            },
+            {
+              "id": "f3-legend-active",
+              "type": "ellipse",
+              "name": "Active dot",
+              "geometry": { "x": 200, "y": 310, "width": 12, "height": 12 },
+              "fill": "#1E5EA0"
+            },
+            {
+              "id": "f3-legend-active-text",
+              "type": "text",
+              "name": "Active label",
+              "geometry": { "x": 220, "y": 308, "width": 50, "height": 16 },
+              "content": "Active",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fill": "#64748B"
+            },
+            {
+              "id": "f3-legend-failed",
+              "type": "ellipse",
+              "name": "Failed dot",
+              "geometry": { "x": 310, "y": 310, "width": 12, "height": 12 },
+              "fill": "#B91C1C"
+            },
+            {
+              "id": "f3-legend-failed-text",
+              "type": "text",
+              "name": "Failed label",
+              "geometry": { "x": 330, "y": 308, "width": 50, "height": 16 },
+              "content": "Failed",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fill": "#64748B"
+            },
+            {
+              "id": "f3-legend-pending",
+              "type": "ellipse",
+              "name": "Pending dot",
+              "geometry": { "x": 420, "y": 310, "width": 12, "height": 12 },
+              "fill": "#F1F5F9",
+              "stroke": "#E2E8F0",
+              "strokeWidth": 1
+            },
+            {
+              "id": "f3-legend-pending-text",
+              "type": "text",
+              "name": "Pending label",
+              "geometry": { "x": 440, "y": 308, "width": 60, "height": 16 },
+              "content": "Pending",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fill": "#64748B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f4-run-detail",
+      "type": "frame",
+      "name": "Run Detail — 1440×900",
+      "geometry": { "x": 1480, "y": 940, "width": 1440, "height": 900 },
+      "fill": "#F8F9FA",
+      "children": [
+        {
+          "id": "f4-sidebar",
+          "type": "rectangle",
+          "name": "Sidebar",
+          "geometry": { "x": 0, "y": 0, "width": 256, "height": 900 },
+          "fill": "#1E3A5F"
+        },
+        {
+          "id": "f4-back-link",
+          "type": "text",
+          "name": "Back link",
+          "geometry": { "x": 288, "y": 32, "width": 100, "height": 24 },
+          "content": "← Back to Runs",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": 500,
+          "fill": "#1E3A5F"
+        },
+        {
+          "id": "f4-run-id",
+          "type": "text",
+          "name": "Run ID",
+          "geometry": { "x": 288, "y": 64, "width": 600, "height": 28 },
+          "content": "Run #a3f7b2c1    •    Created 2 minutes ago",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": 400,
+          "fill": "#64748B"
+        },
+        {
+          "id": "f4-stepper-compact",
+          "type": "rectangle",
+          "name": "Compact stepper area",
+          "geometry": { "x": 288, "y": 112, "width": 1120, "height": 120 },
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "stroke": "#E2E8F0",
+          "strokeWidth": 1
+        },
+        {
+          "id": "f4-stepper-compact-text",
+          "type": "text",
+          "name": "Stepper placeholder",
+          "geometry": { "x": 600, "y": 160, "width": 500, "height": 24 },
+          "content": "Pipeline Stepper (compact) — see Pipeline Stepper frame",
+          "fontFamily": "Inter",
+          "fontSize": 13,
+          "fontWeight": 400,
+          "fill": "#94A3B8",
+          "textAlignHorizontal": "center"
+        },
+        {
+          "id": "f4-left-col-title",
+          "type": "text",
+          "name": "Phase Output title",
+          "geometry": { "x": 288, "y": 256, "width": 200, "height": 24 },
+          "content": "Phase Output",
+          "fontFamily": "Fraunces",
+          "fontSize": 18,
+          "fontWeight": 600,
+          "fill": "#1E293B"
+        },
+        {
+          "id": "f4-output-panel",
+          "type": "rectangle",
+          "name": "Streaming output panel",
+          "geometry": { "x": 288, "y": 288, "width": 680, "height": 380 },
+          "fill": "#0F172A",
+          "cornerRadius": 8
+        },
+        {
+          "id": "f4-output-text",
+          "type": "text",
+          "name": "Output text",
+          "geometry": { "x": 304, "y": 304, "width": 648, "height": 340 },
+          "content": "> Intake agent analyzing ticket...\n✓ Title: \"Add dark mode toggle to dashboard\"\n✓ Description parsed (3 sentences)\n✓ ACs extracted: 2 out of 2 detected\n✓ Components: [frontend, design-system]\n✓ Priority: medium\n\nScoring:\n  AC quality:       35/40\n  Description:      22/25\n  Title specificity: 13/15\n  Priority/sizing:    8/10\n  Components:        10/10\n  ──────────────────────\n  TOTAL:            88/100  ✓ PASSED\n\nProceeding to SPEC phase...",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 12,
+          "fontWeight": 400,
+          "fill": "#E2E8F0"
+        },
+        {
+          "id": "f4-right-col-title",
+          "type": "text",
+          "name": "Evidence title",
+          "geometry": { "x": 992, "y": 256, "width": 200, "height": 24 },
+          "content": "Evidence & Gates",
+          "fontFamily": "Fraunces",
+          "fontSize": 18,
+          "fontWeight": 600,
+          "fill": "#1E293B"
+        },
+        {
+          "id": "f4-gate-card",
+          "type": "rectangle",
+          "name": "Gate status card",
+          "geometry": { "x": 992, "y": 288, "width": 416, "height": 140 },
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "stroke": "#E2E8F0",
+          "strokeWidth": 1
+        },
+        {
+          "id": "f4-gate-card-title",
+          "type": "text",
+          "name": "Gate card title",
+          "geometry": { "x": 1016, "y": 304, "width": 200, "height": 20 },
+          "content": "G1: Intake Gate",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": 600,
+          "fill": "#1E293B"
+        },
+        {
+          "id": "f4-gate-badge",
+          "type": "rectangle",
+          "name": "Passed badge",
+          "geometry": { "x": 1240, "y": 304, "width": 80, "height": 24 },
+          "fill": "#155E2B",
+          "cornerRadius": 12
+        },
+        {
+          "id": "f4-gate-badge-text",
+          "type": "text",
+          "name": "Passed badge label",
+          "geometry": { "x": 1254, "y": 307, "width": 52, "height": 18 },
+          "content": "PASSED",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": 600,
+          "fill": "#FFFFFF",
+          "textAlignHorizontal": "center"
+        },
+        {
+          "id": "f4-gate-detail",
+          "type": "text",
+          "name": "Gate detail",
+          "geometry": { "x": 1016, "y": 336, "width": 368, "height": 60 },
+          "content": "Score: 88/100 (threshold: 80)\nAll required fields present\n2 acceptance criteria validated",
+          "fontFamily": "Inter",
+          "fontSize": 12,
+          "fontWeight": 400,
+          "fill": "#64748B"
+        },
+        {
+          "id": "f4-evidence-tabs",
+          "type": "group",
+          "name": "Evidence tabs",
+          "geometry": { "x": 992, "y": 448, "width": 416, "height": 32 },
+          "children": [
+            {
+              "id": "f4-tab-tests",
+              "type": "rectangle",
+              "name": "Tests tab (active)",
+              "geometry": { "x": 992, "y": 448, "width": 80, "height": 32 },
+              "fill": "#1E3A5F",
+              "cornerRadius": 6
+            },
+            {
+              "id": "f4-tab-tests-text",
+              "type": "text",
+              "name": "Tests tab label",
+              "geometry": { "x": 1008, "y": 455, "width": 48, "height": 18 },
+              "content": "Tests",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": 500,
+              "fill": "#FFFFFF",
+              "textAlignHorizontal": "center"
+            },
+            {
+              "id": "f4-tab-api",
+              "type": "rectangle",
+              "name": "API tab",
+              "geometry": { "x": 1076, "y": 448, "width": 60, "height": 32 },
+              "fill": "#F1F5F9",
+              "cornerRadius": 6
+            },
+            {
+              "id": "f4-tab-api-text",
+              "type": "text",
+              "name": "API tab label",
+              "geometry": { "x": 1086, "y": 455, "width": 40, "height": 18 },
+              "content": "API",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fill": "#64748B",
+              "textAlignHorizontal": "center"
+            },
+            {
+              "id": "f4-tab-screenshots",
+              "type": "rectangle",
+              "name": "Screenshots tab",
+              "geometry": { "x": 1140, "y": 448, "width": 96, "height": 32 },
+              "fill": "#F1F5F9",
+              "cornerRadius": 6
+            },
+            {
+              "id": "f4-tab-screenshots-text",
+              "type": "text",
+              "name": "Screenshots tab label",
+              "geometry": { "x": 1148, "y": 455, "width": 80, "height": 18 },
+              "content": "Shots",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fill": "#64748B",
+              "textAlignHorizontal": "center"
+            },
+            {
+              "id": "f4-tab-review",
+              "type": "rectangle",
+              "name": "Review tab",
+              "geometry": { "x": 1240, "y": 448, "width": 64, "height": 32 },
+              "fill": "#F1F5F9",
+              "cornerRadius": 6
+            },
+            {
+              "id": "f4-tab-review-text",
+              "type": "text",
+              "name": "Review tab label",
+              "geometry": { "x": 1248, "y": 455, "width": 48, "height": 18 },
+              "content": "Review",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fill": "#64748B",
+              "textAlignHorizontal": "center"
+            }
+          ]
+        },
+        {
+          "id": "f4-evidence-content",
+          "type": "rectangle",
+          "name": "Evidence content area",
+          "geometry": { "x": 992, "y": 488, "width": 416, "height": 200 },
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "stroke": "#E2E8F0",
+          "strokeWidth": 1
+        },
+        {
+          "id": "f4-evidence-placeholder",
+          "type": "text",
+          "name": "Evidence placeholder",
+          "geometry": { "x": 1040, "y": 570, "width": 320, "height": 20 },
+          "content": "No test evidence yet",
+          "fontFamily": "Inter",
+          "fontSize": 13,
+          "fontWeight": 400,
+          "fill": "#94A3B8",
+          "textAlignHorizontal": "center"
+        },
+        {
+          "id": "f4-phase-list",
+          "type": "rectangle",
+          "name": "Phase list sidebar",
+          "geometry": { "x": 288, "y": 692, "width": 280, "height": 180 },
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "stroke": "#E2E8F0",
+          "strokeWidth": 1
+        },
+        {
+          "id": "f4-phase-list-title",
+          "type": "text",
+          "name": "Phase list title",
+          "geometry": { "x": 304, "y": 708, "width": 100, "height": 20 },
+          "content": "Phases",
+          "fontFamily": "Inter",
+          "fontSize": 13,
+          "fontWeight": 600,
+          "fill": "#1E293B"
+        },
+        {
+          "id": "f4-phase-intake-item",
+          "type": "group",
+          "name": "Phase item: Intake (done)",
+          "geometry": { "x": 304, "y": 736, "width": 248, "height": 20 },
+          "children": [
+            {
+              "id": "f4-pi-status-dot",
+              "type": "ellipse",
+              "name": "Status dot",
+              "geometry": { "x": 304, "y": 740, "width": 8, "height": 8 },
+              "fill": "#155E2B"
+            },
+            {
+              "id": "f4-pi-name",
+              "type": "text",
+              "name": "Phase name",
+              "geometry": { "x": 320, "y": 737, "width": 100, "height": 18 },
+              "content": "Intake",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": 500,
+              "fill": "#1E293B"
+            },
+            {
+              "id": "f4-pi-badge",
+              "type": "rectangle",
+              "name": "Status badge",
+              "geometry": { "x": 472, "y": 738, "width": 56, "height": 18 },
+              "fill": "#155E2B",
+              "cornerRadius": 9
+            },
+            {
+              "id": "f4-pi-badge-text",
+              "type": "text",
+              "name": "Status badge label",
+              "geometry": { "x": 478, "y": 740, "width": 44, "height": 14 },
+              "content": "PASSED",
+              "fontFamily": "Inter",
+              "fontSize": 10,
+              "fontWeight": 600,
+              "fill": "#FFFFFF"
+            }
+          ]
+        },
+        {
+          "id": "f4-phase-spec-item",
+          "type": "group",
+          "name": "Phase item: Spec (active)",
+          "geometry": { "x": 304, "y": 764, "width": 248, "height": 20 },
+          "children": [
+            {
+              "id": "f4-ps-status-dot",
+              "type": "ellipse",
+              "name": "Status dot",
+              "geometry": { "x": 304, "y": 768, "width": 8, "height": 8 },
+              "fill": "#1E5EA0"
+            },
+            {
+              "id": "f4-ps-name",
+              "type": "text",
+              "name": "Phase name",
+              "geometry": { "x": 320, "y": 765, "width": 100, "height": 18 },
+              "content": "Spec",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": 500,
+              "fill": "#1E293B"
+            },
+            {
+              "id": "f4-ps-badge",
+              "type": "rectangle",
+              "name": "Status badge",
+              "geometry": { "x": 472, "y": 766, "width": 56, "height": 18 },
+              "fill": "#1E5EA0",
+              "cornerRadius": 9
+            },
+            {
+              "id": "f4-ps-badge-text",
+              "type": "text",
+              "name": "Status badge label",
+              "geometry": { "x": 478, "y": 768, "width": 44, "height": 14 },
+              "content": "ACTIVE",
+              "fontFamily": "Inter",
+              "fontSize": 10,
+              "fontWeight": 600,
+              "fill": "#FFFFFF"
+            }
+          ]
+        },
+        {
+          "id": "f4-phase-pending-items",
+          "type": "text",
+          "name": "Pending phases",
+          "geometry": { "x": 320, "y": 800, "width": 220, "height": 60 },
+          "content": "Design    — Pending\nTasks      — Pending\nDevelop   — Pending\nVerify      — Pending\nReview    — Pending\nPR           — Pending",
+          "fontFamily": "Inter",
+          "fontSize": 12,
+          "fontWeight": 400,
+          "fill": "#94A3B8"
+        }
+      ]
+    },
+    {
+      "id": "f5-run-list",
+      "type": "frame",
+      "name": "Run List — 1200×700",
+      "geometry": { "x": 0, "y": 1380, "width": 1200, "height": 700 },
+      "fill": "#FFFFFF",
+      "children": [
+        {
+          "id": "f5-title",
+          "type": "text",
+          "name": "Page title",
+          "geometry": { "x": 80, "y": 40, "width": 300, "height": 36 },
+          "content": "All Runs",
+          "fontFamily": "Fraunces",
+          "fontSize": 28,
+          "fontWeight": 700,
+          "fill": "#1E293B"
+        },
+        {
+          "id": "f5-filter-bar",
+          "type": "rectangle",
+          "name": "Filter bar",
+          "geometry": { "x": 80, "y": 100, "width": 1040, "height": 48 },
+          "fill": "#F8F9FA",
+          "cornerRadius": 8,
+          "stroke": "#E2E8F0",
+          "strokeWidth": 1
+        },
+        {
+          "id": "f5-filter-status",
+          "type": "rectangle",
+          "name": "Status filter dropdown",
+          "geometry": { "x": 96, "y": 110, "width": 140, "height": 28 },
+          "fill": "#FFFFFF",
+          "cornerRadius": 6,
+          "stroke": "#E2E8F0",
+          "strokeWidth": 1
+        },
+        {
+          "id": "f5-filter-status-text",
+          "type": "text",
+          "name": "Status filter label",
+          "geometry": { "x": 108, "y": 114, "width": 116, "height": 20 },
+          "content": "All Statuses  ▾",
+          "fontFamily": "Inter",
+          "fontSize": 13,
+          "fontWeight": 400,
+          "fill": "#64748B"
+        },
+        {
+          "id": "f5-filter-search",
+          "type": "rectangle",
+          "name": "Search input",
+          "geometry": { "x": 252, "y": 110, "width": 240, "height": 28 },
+          "fill": "#FFFFFF",
+          "cornerRadius": 6,
+          "stroke": "#E2E8F0",
+          "strokeWidth": 1
+        },
+        {
+          "id": "f5-filter-search-text",
+          "type": "text",
+          "name": "Search placeholder",
+          "geometry": { "x": 264, "y": 114, "width": 200, "height": 20 },
+          "content": "Search runs...",
+          "fontFamily": "Inter",
+          "fontSize": 13,
+          "fontWeight": 400,
+          "fill": "#94A3B8"
+        },
+        {
+          "id": "f5-table-header",
+          "type": "rectangle",
+          "name": "Table header row",
+          "geometry": { "x": 80, "y": 164, "width": 1040, "height": 36 },
+          "fill": "#F8F9FA",
+          "children": [
+            {
+              "id": "f5-th-status",
+              "type": "text",
+              "name": "Status column header",
+              "geometry": { "x": 96, "y": 174, "width": 100, "height": 16 },
+              "content": "STATUS",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": 500,
+              "letterSpacing": 0.05,
+              "fill": "#64748B"
+            },
+            {
+              "id": "f5-th-ticket",
+              "type": "text",
+              "name": "Ticket column header",
+              "geometry": { "x": 200, "y": 174, "width": 280, "height": 16 },
+              "content": "TICKET",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": 500,
+              "letterSpacing": 0.05,
+              "fill": "#64748B"
+            },
+            {
+              "id": "f5-th-phase",
+              "type": "text",
+              "name": "Phase column header",
+              "geometry": { "x": 500, "y": 174, "width": 160, "height": 16 },
+              "content": "PHASE",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": 500,
+              "letterSpacing": 0.05,
+              "fill": "#64748B"
+            },
+            {
+              "id": "f5-th-date",
+              "type": "text",
+              "name": "Date column header",
+              "geometry": { "x": 680, "y": 174, "width": 200, "height": 16 },
+              "content": "CREATED",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": 500,
+              "letterSpacing": 0.05,
+              "fill": "#64748B"
+            },
+            {
+              "id": "f5-th-actions",
+              "type": "text",
+              "name": "Actions column header",
+              "geometry": { "x": 960, "y": 174, "width": 80, "height": 16 },
+              "content": "ACTIONS",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": 500,
+              "letterSpacing": 0.05,
+              "fill": "#64748B"
+            }
+          ]
+        },
+        {
+          "id": "f5-row-1",
+          "type": "group",
+          "name": "Row 1: Done run",
+          "geometry": { "x": 80, "y": 200, "width": 1040, "height": 48 },
+          "children": [
+            {
+              "id": "f5-r1-badge",
+              "type": "rectangle",
+              "name": "Status badge",
+              "geometry": { "x": 96, "y": 214, "width": 56, "height": 20 },
+              "fill": "#155E2B",
+              "cornerRadius": 10
+            },
+            {
+              "id": "f5-r1-badge-text",
+              "type": "text",
+              "name": "Status badge label",
+              "geometry": { "x": 104, "y": 216, "width": 40, "height": 16 },
+              "content": "DONE",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": 600,
+              "fill": "#FFFFFF",
+              "textAlignHorizontal": "center"
+            },
+            {
+              "id": "f5-r1-ticket",
+              "type": "text",
+              "name": "Ticket title",
+              "geometry": { "x": 200, "y": 214, "width": 280, "height": 20 },
+              "content": "Add dark mode toggle to dashboard",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": 500,
+              "fill": "#1E293B"
+            },
+            {
+              "id": "f5-r1-phase",
+              "type": "text",
+              "name": "Current phase",
+              "geometry": { "x": 500, "y": 214, "width": 160, "height": 20 },
+              "content": "PR Opened",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fill": "#64748B"
+            },
+            {
+              "id": "f5-r1-date",
+              "type": "text",
+              "name": "Created date",
+              "geometry": { "x": 680, "y": 214, "width": 200, "height": 20 },
+              "content": "Jun 20, 2026  14:32",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fill": "#64748B"
+            },
+            {
+              "id": "f5-r1-action",
+              "type": "text",
+              "name": "View link",
+              "geometry": { "x": 960, "y": 214, "width": 80, "height": 20 },
+              "content": "View →",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": 500,
+              "fill": "#1E3A5F"
+            }
+          ]
+        },
+        {
+          "id": "f5-row-2",
+          "type": "group",
+          "name": "Row 2: Active run",
+          "geometry": { "x": 80, "y": 248, "width": 1040, "height": 48 },
+          "children": [
+            {
+              "id": "f5-r2-badge",
+              "type": "rectangle",
+              "name": "Status badge",
+              "geometry": { "x": 96, "y": 262, "width": 64, "height": 20 },
+              "fill": "#1E5EA0",
+              "cornerRadius": 10
+            },
+            {
+              "id": "f5-r2-badge-text",
+              "type": "text",
+              "name": "Status badge label",
+              "geometry": { "x": 102, "y": 264, "width": 52, "height": 16 },
+              "content": "ACTIVE",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": 600,
+              "fill": "#FFFFFF",
+              "textAlignHorizontal": "center"
+            },
+            {
+              "id": "f5-r2-ticket",
+              "type": "text",
+              "name": "Ticket title",
+              "geometry": { "x": 200, "y": 262, "width": 280, "height": 20 },
+              "content": "Fix N+1 query in Run list endpoint",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": 500,
+              "fill": "#1E293B"
+            },
+            {
+              "id": "f5-r2-phase",
+              "type": "text",
+              "name": "Current phase",
+              "geometry": { "x": 500, "y": 262, "width": 160, "height": 20 },
+              "content": "Develop",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fill": "#64748B"
+            },
+            {
+              "id": "f5-r2-date",
+              "type": "text",
+              "name": "Created date",
+              "geometry": { "x": 680, "y": 262, "width": 200, "height": 20 },
+              "content": "Jun 21, 2026  09:15",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fill": "#64748B"
+            },
+            {
+              "id": "f5-r2-action",
+              "type": "text",
+              "name": "View link",
+              "geometry": { "x": 960, "y": 262, "width": 80, "height": 20 },
+              "content": "View →",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": 500,
+              "fill": "#1E3A5F"
+            }
+          ]
+        },
+        {
+          "id": "f5-row-3",
+          "type": "group",
+          "name": "Row 3: Failed run",
+          "geometry": { "x": 80, "y": 296, "width": 1040, "height": 48 },
+          "children": [
+            {
+              "id": "f5-r3-badge",
+              "type": "rectangle",
+              "name": "Status badge",
+              "geometry": { "x": 96, "y": 310, "width": 56, "height": 20 },
+              "fill": "#B91C1C",
+              "cornerRadius": 10
+            },
+            {
+              "id": "f5-r3-badge-text",
+              "type": "text",
+              "name": "Status badge label",
+              "geometry": { "x": 102, "y": 312, "width": 44, "height": 16 },
+              "content": "FAILED",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": 600,
+              "fill": "#FFFFFF",
+              "textAlignHorizontal": "center"
+            },
+            {
+              "id": "f5-r3-ticket",
+              "type": "text",
+              "name": "Ticket title",
+              "geometry": { "x": 200, "y": 310, "width": 280, "height": 20 },
+              "content": "Add SSE reconnection logic",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": 500,
+              "fill": "#1E293B"
+            },
+            {
+              "id": "f5-r3-phase",
+              "type": "text",
+              "name": "Current phase",
+              "geometry": { "x": 500, "y": 310, "width": 160, "height": 20 },
+              "content": "Develop (retry 2/2)",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fill": "#64748B"
+            },
+            {
+              "id": "f5-r3-date",
+              "type": "text",
+              "name": "Created date",
+              "geometry": { "x": 680, "y": 310, "width": 200, "height": 20 },
+              "content": "Jun 20, 2026  22:45",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fill": "#64748B"
+            },
+            {
+              "id": "f5-r3-action",
+              "type": "text",
+              "name": "View link",
+              "geometry": { "x": 960, "y": 310, "width": 80, "height": 20 },
+              "content": "View →",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": 500,
+              "fill": "#1E3A5F"
+            }
+          ]
+        },
+        {
+          "id": "f5-row-4",
+          "type": "group",
+          "name": "Row 4: Bounced run",
+          "geometry": { "x": 80, "y": 344, "width": 1040, "height": 48 },
+          "children": [
+            {
+              "id": "f5-r4-badge",
+              "type": "rectangle",
+              "name": "Status badge",
+              "geometry": { "x": 96, "y": 358, "width": 72, "height": 20 },
+              "fill": "#C2790A",
+              "cornerRadius": 10
+            },
+            {
+              "id": "f5-r4-badge-text",
+              "type": "text",
+              "name": "Status badge label",
+              "geometry": { "x": 101, "y": 360, "width": 62, "height": 16 },
+              "content": "BOUNCED",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": 600,
+              "fill": "#FFFFFF",
+              "textAlignHorizontal": "center"
+            },
+            {
+              "id": "f5-r4-ticket",
+              "type": "text",
+              "name": "Ticket title",
+              "geometry": { "x": 200, "y": 358, "width": 280, "height": 20 },
+              "content": "Make it faster",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": 500,
+              "fill": "#1E293B"
+            },
+            {
+              "id": "f5-r4-phase",
+              "type": "text",
+              "name": "Current phase",
+              "geometry": { "x": 500, "y": 358, "width": 160, "height": 20 },
+              "content": "Intake (score: 42)",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fill": "#64748B"
+            },
+            {
+              "id": "f5-r4-date",
+              "type": "text",
+              "name": "Created date",
+              "geometry": { "x": 680, "y": 358, "width": 200, "height": 20 },
+              "content": "Jun 21, 2026  10:05",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fill": "#64748B"
+            },
+            {
+              "id": "f5-r4-action",
+              "type": "text",
+              "name": "View link",
+              "geometry": { "x": 960, "y": 358, "width": 80, "height": 20 },
+              "content": "View →",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": 500,
+              "fill": "#1E3A5F"
+            }
+          ]
+        },
+        {
+          "id": "f5-row-5",
+          "type": "group",
+          "name": "Row 5: HITL pending run",
+          "geometry": { "x": 80, "y": 392, "width": 1040, "height": 48 },
+          "children": [
+            {
+              "id": "f5-r5-badge",
+              "type": "rectangle",
+              "name": "Status badge",
+              "geometry": { "x": 96, "y": 406, "width": 100, "height": 20 },
+              "fill": "#1E3A5F",
+              "cornerRadius": 10
+            },
+            {
+              "id": "f5-r5-badge-text",
+              "type": "text",
+              "name": "Status badge label",
+              "geometry": { "x": 103, "y": 408, "width": 86, "height": 16 },
+              "content": "AWAITING HITL",
+              "fontFamily": "Inter",
+              "fontSize": 10,
+              "fontWeight": 600,
+              "fill": "#FFFFFF",
+              "textAlignHorizontal": "center"
+            },
+            {
+              "id": "f5-r5-ticket",
+              "type": "text",
+              "name": "Ticket title",
+              "geometry": { "x": 200, "y": 406, "width": 280, "height": 20 },
+              "content": "Refactor orchestrator execute_phase",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": 500,
+              "fill": "#1E293B"
+            },
+            {
+              "id": "f5-r5-phase",
+              "type": "text",
+              "name": "Current phase",
+              "geometry": { "x": 500, "y": 406, "width": 160, "height": 20 },
+              "content": "PR_READY",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fill": "#64748B"
+            },
+            {
+              "id": "f5-r5-date",
+              "type": "text",
+              "name": "Created date",
+              "geometry": { "x": 680, "y": 406, "width": 200, "height": 20 },
+              "content": "Jun 20, 2026  19:18",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fill": "#64748B"
+            },
+            {
+              "id": "f5-r5-action",
+              "type": "text",
+              "name": "View link",
+              "geometry": { "x": 960, "y": 406, "width": 80, "height": 20 },
+              "content": "View →",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": 500,
+              "fill": "#1E3A5F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

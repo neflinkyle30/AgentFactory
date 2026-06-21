@@ -1,0 +1,209 @@
+/* Agent Factory — Main Stylesheet
+   Blueprint Industrial · IBM Plex Mono · Sharp corners */
+
+@import './tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Custom component layer (Blueprint Industrial) ──────────────────── */
+
+@layer components {
+  /* Status badge variants — rectangular, sharp */
+  .badge-passed {
+    @apply inline-flex items-center px-2 py-0.5 text-xs font-semibold;
+    font-family: var(--font-mono);
+    background-color: var(--color-success-light-hex);
+    color: var(--color-success-hex);
+    letter-spacing: var(--tracking-mono-label);
+  }
+
+  .badge-failed {
+    @apply inline-flex items-center px-2 py-0.5 text-xs font-semibold;
+    font-family: var(--font-mono);
+    background-color: var(--color-danger-light-hex);
+    color: var(--color-danger-hex);
+    letter-spacing: var(--tracking-mono-label);
+  }
+
+  .badge-active {
+    @apply inline-flex items-center px-2 py-0.5 text-xs font-semibold;
+    font-family: var(--font-mono);
+    background-color: var(--color-info-light-hex);
+    color: var(--color-info-hex);
+    letter-spacing: var(--tracking-mono-label);
+  }
+
+  .badge-pending {
+    @apply inline-flex items-center px-2 py-0.5 text-xs font-semibold;
+    font-family: var(--font-mono);
+    background-color: var(--border-subtle);
+    color: var(--text-tertiary);
+    letter-spacing: var(--tracking-mono-label);
+  }
+
+  .badge-warning {
+    @apply inline-flex items-center px-2 py-0.5 text-xs font-semibold;
+    font-family: var(--font-mono);
+    background-color: var(--color-warning-light-hex);
+    color: var(--color-warning);
+    letter-spacing: var(--tracking-mono-label);
+  }
+
+  /* Card component — sharp, hairline border */
+  .card {
+    font-family: var(--font-mono);
+    background-color: var(--bg-elevated);
+    border: 1px solid var(--border-default);
+    padding: var(--space-6);
+  }
+
+  /* Sidebar link — cyan indicator on active */
+  .sidebar-link {
+    @apply flex items-center w-full px-6 py-3 text-sm transition-colors;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    letter-spacing: var(--tracking-mono-wide);
+    color: var(--text-tertiary);
+    border-left: 3px solid transparent;
+  }
+
+  .sidebar-link:hover {
+    color: var(--text-primary);
+    background-color: var(--bg-sidebar-hover);
+  }
+
+  .sidebar-link.active {
+    color: var(--text-primary);
+    font-weight: var(--weight-semibold);
+    border-left-color: var(--color-cyan-accent);
+  }
+
+  /* Form input — monospace, sharp */
+  .input-field {
+    @apply w-full px-3 py-2;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--text-primary);
+    background-color: var(--bg-elevated);
+    border: 1px solid var(--border-default);
+    transition: border-color var(--duration-normal) var(--ease-out-expo);
+  }
+
+  .input-field:focus {
+    border-color: var(--border-focus);
+    outline: none;
+  }
+
+  .input-field::placeholder {
+    color: var(--text-tertiary);
+  }
+
+  /* Button variants — all sharp, monospace */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-semibold;
+    font-family: var(--font-mono);
+    letter-spacing: var(--tracking-mono-wide);
+    color: var(--text-inverse);
+    background-color: var(--color-primary);
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--duration-normal) var(--ease-out-expo);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-primary-hover);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-semibold;
+    font-family: var(--font-mono);
+    letter-spacing: var(--tracking-mono-wide);
+    color: var(--color-primary);
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    cursor: pointer;
+    transition: all var(--duration-normal) var(--ease-out-expo);
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--text-inverse);
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-3 py-2 text-sm font-medium;
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color var(--duration-normal) var(--ease-out-expo);
+  }
+
+  .btn-ghost:hover {
+    color: var(--text-primary);
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-semibold;
+    font-family: var(--font-mono);
+    letter-spacing: var(--tracking-mono-wide);
+    color: var(--text-inverse);
+    background-color: var(--color-danger-hex);
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Heading — monospace display */
+  .heading-display {
+    font-family: var(--font-mono);
+    font-weight: var(--weight-bold);
+    color: var(--text-primary);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
+  }
+
+  .heading-section {
+    font-family: var(--font-mono);
+    font-weight: var(--weight-semibold);
+    color: var(--text-primary);
+    line-height: var(--leading-snug);
+    letter-spacing: var(--tracking-mono-label);
+  }
+
+  /* Label (uppercase small, monospace) */
+  .label-uppercase {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-mono-wide);
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+  }
+
+  /* Blueprint grid background */
+  .blueprint-bg {
+    background-color: var(--blueprint-bg);
+    background-image:
+      linear-gradient(var(--blueprint-grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--blueprint-grid) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Edge annotation mark */
+  .edge-mark {
+    color: var(--color-cyan-accent);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-mono-label);
+  }
+
+  /* Technical annotation */
+  .tech-annotation {
+    font-family: var(--font-mono);
+    font-size: 0.5625rem;
+    color: var(--text-tertiary);
+  }
+}

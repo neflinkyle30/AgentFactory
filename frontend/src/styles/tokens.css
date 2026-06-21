@@ -1,0 +1,231 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   Agent Factory — Design Tokens (Blueprint Industrial)
+
+   IBM Plex Mono exclusively. Cyan accent. Sharp corners. Blueprint grid.
+   Semantic tokens with dark mode via [data-theme="dark"] / .dark class.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Design Tokens (light mode — default) ──────────────────────────────── */
+
+:root {
+  /* ── Color Palette ──────────────────────────────────────────────────── */
+  --color-cyan-accent: #4A9FD8;
+  --color-cyan-accent-hover: #3A8BC2;
+
+  --color-primary: #1A1A1A;
+  --color-primary-hover: #333333;
+  --color-secondary: #666666;
+
+  --color-success: #22A65E;
+  --color-success-hex: #22A65E;
+  --color-success-light: #E8F5EE;
+  --color-success-light-hex: #E8F5EE;
+
+  --color-warning: #D4A017;
+  --color-warning-light: #FDF8E8;
+  --color-warning-light-hex: #FDF8E8;
+
+  --color-danger: #B91C1C;
+  --color-danger-hex: #B91C1C;
+  --color-danger-light: #FEE2E2;
+  --color-danger-light-hex: #FEE2E2;
+
+  --color-info: #4A9FD8;
+  --color-info-hex: #4A9FD8;
+  --color-info-light: #EDF5FA;
+  --color-info-light-hex: #EDF5FA;
+
+  /* ── Blueprint Grid Colors ──────────────────────────────────────────── */
+  --blueprint-bg: #F0F4F8;
+  --blueprint-grid: #D4E0EC;
+  --blueprint-grid-strong: #C8D6E5;
+
+  /* ── Semantic Surface Tokens ────────────────────────────────────────── */
+  --bg-surface: var(--blueprint-bg);
+  --bg-elevated: #FFFFFF;
+  --bg-sidebar: #E8EEF4;
+  --bg-sidebar-hover: #DCE4EE;
+  --bg-code: #0F172A;
+  --bg-overlay: oklch(0% 0 0 / 0.4);
+
+  /* ── Semantic Text Tokens ───────────────────────────────────────────── */
+  --text-primary: #1A1A1A;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --text-inverse: #FFFFFF;
+  --text-link: var(--color-cyan-accent);
+  --text-code: #E2E8F0;
+
+  /* ── Border Tokens ──────────────────────────────────────────────────── */
+  --border-default: #C8D6E5;
+  --border-subtle: #E8EDF2;
+  --border-strong: #999999;
+  --border-focus: var(--color-cyan-accent);
+
+  /* ── Typography: Font Families ──────────────────────────────────────── */
+  --font-mono: 'IBM Plex Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+
+  /* ── Typography: Sizes (rem-based) ──────────────────────────────────── */
+  --text-xs: 0.6875rem;   /* 11px */
+  --text-sm: 0.75rem;     /* 12px */
+  --text-base: 0.8125rem; /* 13px */
+  --text-lg: 0.875rem;    /* 14px */
+  --text-xl: 1rem;        /* 16px */
+  --text-2xl: 1.125rem;   /* 18px */
+  --text-3xl: 1.5rem;     /* 24px */
+  --text-4xl: 1.75rem;    /* 28px */
+
+  /* ── Typography: Line Heights ───────────────────────────────────────── */
+  --leading-tight: 1.1;
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+
+  /* ── Typography: Font Weights ───────────────────────────────────────── */
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* ── Typography: Letter Spacing ─────────────────────────────────────── */
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.05em;
+  --tracking-mono-label: 0.075em;
+  --tracking-mono-wide: 0.125em;
+
+  /* ── Spacing Scale (×4 base unit) ───────────────────────────────────── */
+  --space-0: 0;
+  --space-1: 0.25rem;    /* 4px */
+  --space-2: 0.5rem;     /* 8px */
+  --space-3: 0.75rem;    /* 12px */
+  --space-4: 1rem;       /* 16px */
+  --space-6: 1.5rem;     /* 24px */
+  --space-8: 2rem;       /* 32px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+
+  /* ── Layout Tokens ──────────────────────────────────────────────────── */
+  --sidebar-width: 15rem;         /* 240px */
+  --content-max-width: 75rem;     /* 1200px */
+  --content-padding: var(--space-8);
+
+  /* ── Border Radius ──────────────────────────────────────────────────── */
+  --radius-none: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-full: 0px;
+
+  /* ── Shadows (none for Blueprint — flat aesthetic) ──────────────────── */
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+
+  /* ── Transitions ────────────────────────────────────────────────────── */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 100ms;
+  --duration-normal: 150ms;
+  --duration-slow: 300ms;
+  --duration-color: 300ms;
+
+  /* ── Z-Index Scale ──────────────────────────────────────────────────── */
+  --z-sidebar: 40;
+  --z-overlay: 50;
+  --z-modal: 60;
+  --z-toast: 70;
+}
+
+/* ── Dark Mode Tokens ─────────────────────────────────────────────────── */
+
+[data-theme="dark"],
+.dark {
+  /* ── Semantic Surface Tokens (dark) ─────────────────────────────────── */
+  --blueprint-bg: #0F172A;
+  --blueprint-grid: #1A2740;
+  --blueprint-grid-strong: #243356;
+  --bg-surface: var(--blueprint-bg);
+  --bg-elevated: #1A2438;
+  --bg-sidebar: #111B2E;
+  --bg-sidebar-hover: #1A2740;
+  --bg-code: #020617;
+  --bg-overlay: oklch(0% 0 0 / 0.6);
+
+  /* ── Semantic Text Tokens (dark) ────────────────────────────────────── */
+  --text-primary: #E2E8F0;
+  --text-secondary: #8899BB;
+  --text-tertiary: #556688;
+  --text-inverse: #FFFFFF;
+  --text-link: oklch(70% 0.10 240);
+  --text-code: #CBD5E1;
+
+  /* ── Border Tokens (dark) ───────────────────────────────────────────── */
+  --border-default: #243356;
+  --border-subtle: #1A2740;
+  --border-strong: #3A4A6A;
+  --border-focus: var(--color-cyan-accent);
+
+  /* ── Status colors (dark variants) ──────────────────────────────────── */
+  --color-success-light-hex: #0F2D1E;
+  --color-warning-light-hex: #2D2410;
+  --color-danger-light-hex: #2D1010;
+  --color-info-light-hex: #102030;
+}
+
+/* ── Reduced Motion ───────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0s;
+    --duration-normal: 0s;
+    --duration-slow: 0s;
+    --duration-color: 0s;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
+
+/* ── Global Resets ────────────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* 16px base */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--text-primary);
+  background-color: var(--bg-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Focus Styles ─────────────────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* ── Selection ────────────────────────────────────────────────────────── */
+
+::selection {
+  background-color: var(--color-cyan-accent);
+  color: var(--text-inverse);
+}
